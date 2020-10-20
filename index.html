@@ -2,20 +2,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width,hight=device-hight,minimum-scale=1.0,maximum-scale=1.0,ser-scalable=none">
 <title>滑稽|滑稽官网</title>
-<meta name="description" content="圆嘟嘟的脸萌萌哒，弧度上扬的嘴角傲而不娇，微微泛红的脸颊让人感到无限温暖，双眼右视充满欢乐使人浮想联翩，轻挑秀眉深藏功与名。">
-<meta name="keywords" content="滑稽,滑稽官网,huaji">
+<meta name="description" content="">/*详情描述*/
+<meta name="keywords" content="">/*关键词*/
 
 <style type="text/css">
-body { 
+body {
 margin: 0; 
-padding: 0; 
-position: relative; 
-background-image: url(images/xh.jpg); 
-/*background-repeat: no-repeat;*/ 
-background-position: center; 
-width: 100%; 
-height: 100%; 
-background-size: 100% 100%; 
+padding: 0;
+position: relative;
+background-image: url(images/xh.jpg);
+/*background-repeat: no-repeat;*/
+background-position: center;
+width: 100%;
+height: 100%;
+background-size: 100% 100%;
 }
 
 </style>
@@ -53,12 +53,12 @@ background-size: 100% 100%;
 
 	var starSnow = 1;
 
-	var particles = []; 
+	var particles = [];
 
 	var particleImage = new Image();
 	//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
-	particleImage.src = 'images/ParticleSmoke.png'; 
-	
+	particleImage.src = 'images/ParticleSmoke.png';
+
 
 	function init() {
 		//alert("message3");
@@ -71,7 +71,7 @@ background-size: 100% 100%;
 
 		scene = new THREE.Scene();
 		scene.add(camera);
-			
+
 		renderer = new THREE.CanvasRenderer();
 		renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 		var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
@@ -80,14 +80,14 @@ background-size: 100% 100%;
 			//alert("message");
 			particle = new Particle3D( material);
 			particle.position.x = Math.random() * 2000-1000;
-			
+
 			particle.position.z = Math.random() * 2000-1000;
 			particle.position.y = Math.random() * 2000-1000;
 			//particle.position.y = Math.random() * (1600-particle.position.z)-1000;
 			particle.scale.x = particle.scale.y =  1;
 			scene.add( particle );
-			
-			particles.push(particle); 
+
+			particles.push(particle);
 		}
 
 		container.appendChild( renderer.domElement );
@@ -97,9 +97,9 @@ background-size: 100% 100%;
 		document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 		document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 		document.addEventListener( 'touchend', onDocumentTouchEnd, false );
-		
+
 		setInterval( loop, 1000 / 60 );
-		
+
 	}
 
 	var touchStartX;
@@ -129,7 +129,7 @@ background-size: 100% 100%;
 				if (direction>0) {touchFlag = 1;}
 				else if (direction<0) {touchFlag = -1;};
 				//changeAndBack(touchFlag);
-			}	
+			}
 		}
 	}
 
@@ -138,7 +138,7 @@ background-size: 100% 100%;
 		// 	event.preventDefault();
 		// 	touchEndX = event.touches[ 0 ].pageX ;
 		// 	touchEndY = event.touches[ 0 ].pageY ;
-	
+
 		// }这里存在问题
 		var direction = event.changedTouches[ 0 ].pageX - touchStartX;
 
@@ -166,7 +166,7 @@ background-size: 100% 100%;
 				speedX=0;
 				clearInterval(clearI);
 			};
-			
+
 			for (var i = 0; i < particles.length; i++) {
 				particles[i].velocity=new THREE.Vector3(speedX,-10,0);
 			}
@@ -178,21 +178,21 @@ background-size: 100% 100%;
 
 	function loop() {
 		for(var i = 0; i<particles.length; i++){
-			var particle = particles[i]; 
-			particle.updatePhysics(); 
+			var particle = particles[i];
+			particle.updatePhysics();
 
 			with(particle.position)
 			{
 				if((y<-1000)&&starSnow) {y+=2000;}
 
-				if(x>1000) x-=2000; 
+				if(x>1000) x-=2000;
 				else if(x<-1000) x+=2000;
-				if(z>1000) z-=2000; 
+				if(z>1000) z-=2000;
 				else if(z<-1000) z+=2000;
-			}			
+			}
 		}
 
-		camera.lookAt(scene.position); 
+		camera.lookAt(scene.position);
 
 		renderer.render( scene, camera );
 	}
@@ -203,7 +203,7 @@ background-size: 100% 100%;
 	(function() {
 	  var hm = document.createElement("script");
 	  hm.src = "https://hm.baidu.com/hm.js?864d923b2acbf38e4d459d1755e77f79";
-	  var s = document.getElementsByTagName("script")[0]; 
+	  var s = document.getElementsByTagName("script")[0];
 	  s.parentNode.insertBefore(hm, s);
 	})();
 </script>
