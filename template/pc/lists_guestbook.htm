@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{$eyou.field.seo_title}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/global.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/widget.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/variouscomponents.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/images.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/theme.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/color_0.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.min.js"></script>
+<!--[if !IE]><!-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/base.js"></script>
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/lightbox.min.css" rel="stylesheet">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.superslide.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/common.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/theme.js"></script>
+<!-- feib -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/layer.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/language.js"></script>
+<!-- plugins -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.formsvalidation.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.nodecommon.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/extend.js"></script>
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/components.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.menu_style.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.init.js"></script>
+<script type="text/javascript">
+$(function(){
+    dataAnimate();
+    (function($,lanno){
+        if(lanno === "" || lanno === "default"){
+            return '';
+        }
+        $(".w-languege").each(function(){
+            $(this).find("a").each(function(){
+                if($(this).data("lanno") === lanno){
+                    $(this).addClass("cur");
+                }else{
+                    if($(this).hasClass("cur")){
+                        $(this).removeClass("cur");
+                    }
+                }
+            });
+        });
+    })(jQuery,"cn");
+});
+</script>
+</head>
+<body>
+<div class="body"> {eyou:include file="header.htm"/}
+  <section class="w-container bannerBox ">
+    <div class="banner"> <img src="{eyou:notempty name='$eyou.field.banner' /}{$eyou.field.banner} {eyou:else /}{$eyou.field.typeid|gettoptype=###,'banner'}{/eyou:notempty}
+" alt="banner" title="" style=""  /> <a href="javascript:void(0);" ><span  style="display:none;">none</span></a> </div>
+  </section>
+  <div class="w-container w-main">
+    <div class="w-section">
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in">
+          <div class="li-div">
+            <div class="w-title w-title1"  style="">
+              <div class="w-title-in">
+                <div class="w-title-inner">
+                  <div class="title-h-in">
+                    <h2 class="color_main color_h" style="">{$eyou.field.typeid|gettoptype=###,'typename'}</h2>
+                    <span class="color_vice color_span" style="">{$eyou.field.typeid|gettoptype=###,'englist_name'}</span>
+                    <div class="simpline bg_simpline"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="li-div col-li-div">
+            <div class="col-table">
+              <table class="div-table div-table-first" width="100%" cellspacing="0"  cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td class="td-w" width="14.83739837398374%"><div class="div-padding">
+                        <div class="li-div">
+                          <div class="w-space space-b noChoose"  style="height:40px;">
+                            <div class="stretch-b"></div>
+                          </div>
+                        </div>
+                      </div></td>
+                    <td class="td-w" width="72.81029802027757%"><div class="div-padding">
+                        <div class="li-div">
+                          <div class="w-form"   style=""> {eyou:guestbookform type='default'}
+                            <form method="POST"  enctype="multipart/form-data" action="{$field.action}" id="myform">
+                              <div class="li-div" >
+                                <div class="w-form-section  clearfix" style="">
+                                  <div class="w-form-shartText">
+                                    <label class="w-label-form"> <span>{$field.itemname_1}</span> <span class="star_note">*</span> </label>
+                                    <div class="" style="">
+                                      <input class="w-text-form" style="width:100%" type="text"  name="{$field.attr_1}" id="attr_1" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="li-div" >
+                                <div class="w-form-section  clearfix" style="">
+                                  <div class="w-form-tel">
+                                    <label class="w-label-form"> <span>{$field.itemname_2}</span> <span class="star_note">*</span> </label>
+                                    <div class="" style="">
+                                      <input class="w-text-form" style="width:100%" type="tel"  name="{$field.attr_2}" id="attr_2" >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="li-div" >
+                                <div class="w-form-section  clearfix" style="">
+                                  <div class="w-form-Email">
+                                    <label class="w-label-form"> <span>{$field.itemname_3}</span> <span class="star_note">*</span> </label>
+                                    <div class="" style="">
+                                      <input class="w-text-form" style="width:100%" type="email"  name="{$field.attr_3}" id="attr_3"/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="li-div" >
+                                <div class="w-form-section clearfix"  style="">
+                                  <div class="w-form-largeText">
+                                    <label class="w-label-form"> {$field.itemname_4} <span class="star_note">*</span> </label>
+                                    <div class="" style="">
+                                      <textarea class="w-textarea-form" style="width:100%;"  name="{$field.attr_4}" id="attr_4"></textarea>
+                                      <input class="w-text-form" type="hidden" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-form-submit">
+                                <div class="w-buttom" style="text-align: center;">
+                                  <div class="btn-default-w g-form-components" onclick="checkForm();"> <span class="btn-inner">提交</span> </div>
+                                </div>
+                              </div>
+                              {$field.hidden}
+                            </form>
+                            <script type="text/javascript">
+                            function checkForm()
+                            {
+                              if(document.getElementById('attr_1').value.length == 0)
+                              {
+                                alert('请输入您的{$field.itemname_1}');
+                                return false;
+                              }
+                              if(document.getElementById('attr_2').value.length == 0)
+                              {
+                                alert('请输入您的{$field.itemname_2}');
+                                return false;
+                              }
+                              document.getElementById('myform').submit();
+                            }
+                          </script> 
+                            {/eyou:guestbookform} </div>
+                        </div>
+                      </div></td>
+                    <td class="td-w" width="13.08808117378049%"><div class="div-padding">
+                        <div class="li-div" >
+                          <div class="w-space space-b noChoose"  style="height:40px;">
+                            <div class="stretch-b"></div>
+                          </div>
+                        </div>
+                      </div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {eyou:include file="footer.htm"/} </div>
+<div class="topTel" onclick="$('body,html').animate({scrollTop: 0}, 500);"><i class="fa fa-arrow-up"></i></div>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.global.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.form.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/lightbox.min.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.custom.js"></script>
+</body>
+</html>

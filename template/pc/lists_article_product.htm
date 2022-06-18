@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{$eyou.field.seo_title}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta name="generator" content="eyoucms" data-variable="{eyou:global name='web_eyoucms' /}" />
+<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/global.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/widget.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/variouscomponents.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/images.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/theme.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/color_0.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.min.js"></script>
+<!--[if !IE]><!-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/base.js"></script>
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/lightbox.min.css" rel="stylesheet">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.superslide.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/common.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/theme.js"></script>
+<!-- feib -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/layer.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/language.js"></script>
+<!-- plugins -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.formsvalidation.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.nodecommon.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/extend.js"></script>
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/components.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.menu_style.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.init.js"></script>
+<script type="text/javascript">
+$(function(){
+    dataAnimate();
+    (function($,lanno){
+        if(lanno === "" || lanno === "default"){
+            return '';
+        }
+        $(".w-languege").each(function(){
+            $(this).find("a").each(function(){
+                if($(this).data("lanno") === lanno){
+                    $(this).addClass("cur");
+                }else{
+                    if($(this).hasClass("cur")){
+                        $(this).removeClass("cur");
+                    }
+                }
+            });
+        });
+    })(jQuery,"cn");
+});
+</script>
+</head>
+<body>
+<div class="body"> {eyou:include file="header.htm"/}
+  <section class="w-container bannerBox ">
+    <div class="banner"> <img src="{eyou:notempty name='$eyou.field.banner' /}{$eyou.field.banner} {eyou:else /}{$eyou.field.typeid|gettoptype=###,'banner'}{/eyou:notempty}
+" alt="banner" title="" style=""  /> <a href="javascript:void(0);" ><span style="display:none;">none</span></a> </div>
+  </section>
+  <div class="w-container w-main">
+    <div class="w-section ">
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  ">
+          <div class="li-div col-li-div">
+            <div class="col-table">
+              <table class="div-table div-table-first" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td class="td-w" width="22.15447154471545%"><div class="div-padding">
+                        <div class="li-div" >
+                          <div class="w-space space-b noChoose"  style="height:20px;">
+                            <div class="stretch-b"></div>
+                          </div>
+                        </div>
+                        <div class="li-div">
+                          <div class=""  style=""> {eyou:channelartlist typeid='1'}
+                            <div class="w-com-menu w-com-menu-V">
+                              <div class="w-com-menu-in">
+                                <div class="systitle">
+                                  <div class="systitle-in">{eyou:field name='typename' /}</div>
+                                  <i class="fa icon_menuControl"></i> </div>
+                                <ul class="ul-parent">
+                                  {eyou:channel type="first" currentstyle="cur"}
+                                  <li class="li-parent {$field.currentstyle}">
+                                    <div class="div-parent"> <a  href="{$field.typeurl}" >{$field.typename}</a> <span class="menu_simpline_cur"></span> </div>
+                                  </li>
+                                  {/eyou:channel}
+                                  {eyou:channel type="first" currentstyle="cur"} <span> <a class="{$field.currentstyle}" href="{$field.typeurl}">{$field.typename}</a> </span> {/eyou:channel}
+                                </ul>
+                              </div>
+                            </div>
+                            {/eyou:channelartlist} </div>
+                        </div>
+                      </div></td>
+                    <td class="td-w" width="77.872627072218%"><div class="div-padding">
+                        <div class="li-div">
+                          <div class="w-title w-title5 lineborder"  style="">
+                            <div class="w-title-in">
+                              <div class="w-title-inner">
+                                <div class="title-h-in">
+                                  <h2 class="border_colorbottom_main" style="">{$eyou.field.typename}</h2>
+                                  <span style="">{$eyou.field.englist_name}</span> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="li-div">
+                          <div class="w-multi-imgs"  style="">
+                            <div class="multi-imgs">
+                              <ul>
+                                {eyou:list pagesize="6" titlelen="20"}
+                                <li style="width:33.33%;" data-ih="523" data-iw="718">
+                                  <div class="gallery-img">
+                                    <div class="gallery-mar" style="margin:4px;"> <a style="cursor:default;" data-title="{$field.title}" class="fancybox-thumbs" href="{$field.litpic}" data-lightbox="image-403e4be26ba977921b9bd20bbd7f5880" title="{$field.title}">
+                                      <div class="gallery-border" style="border-width:0px;">
+                                        <div class="gallery-aspectRatio" style="padding: 0px 0px 75%;">
+                                          <div class="imgScaleBig">
+                                            <div class="gallery-img-in img"> <img src="{$field.litpic}" style="width: 100%; height: 97.0142%; left: 0%; top: 1.4929%;"> </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="caption gallery-caption">
+                                        <div class="captionbg gallery-captionbg"></div>
+                                        <div class="caption-text gallery-caption-text">
+                                          <div class="caption-text-in gallery-caption-text-in">
+                                            <h3 class="g-gallery-enterRow">{$field.title}</h3>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      </a> </div>
+                                  </div>
+                                </li>
+                                {/eyou:list}
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="next1"> {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /}</div>
+                        </div>
+                      </div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:40px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {eyou:include file="footer.htm"/} </div>
+<div class="topTel" onclick="$('body,html').animate({scrollTop: 0}, 500);"><i class="fa fa-arrow-up"></i></div>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.global.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.form.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/lightbox.min.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.custom.js"></script>
+</body>
+</html>

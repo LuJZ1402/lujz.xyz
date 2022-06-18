@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{$eyou.field.seo_title}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/global.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/widget.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/variouscomponents.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/images.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/theme.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/color_0.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.min.js"></script>
+<!--[if !IE]><!-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/base.js"></script>
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/lightbox.min.css" rel="stylesheet">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.superslide.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/common.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/theme.js"></script>
+<!-- feib -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/layer.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/language.js"></script>
+<!-- plugins -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.formsvalidation.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.nodecommon.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/extend.js"></script>
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/components.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.menu_style.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.init.js"></script>
+<script type="text/javascript">
+$(function(){
+    dataAnimate();
+    (function($,lanno){
+        if(lanno === "" || lanno === "default"){
+            return '';
+        }
+        $(".w-languege").each(function(){
+            $(this).find("a").each(function(){
+                if($(this).data("lanno") === lanno){
+                    $(this).addClass("cur");
+                }else{
+                    if($(this).hasClass("cur")){
+                        $(this).removeClass("cur");
+                    }
+                }
+            });
+        });
+    })(jQuery,"cn");
+});
+</script>
+</head>
+<body>
+<div class="body"> {eyou:include file="header.htm"/}
+  <section class="w-container bannerBox ">
+    <div class="banner"> <img src="{eyou:notempty name='$eyou.field.banner' /}{$eyou.field.banner} {eyou:else /}{$eyou.field.typeid|gettoptype=###,'banner'}{/eyou:notempty}
+" alt="banner" title="" style=""  /> <a href="javascript:void(0);" ><span style="display:none;">none</span></a> </div>
+  </section>
+  <div class="w-container w-main">
+    <div class="row">
+      <div class="wrap-content-in w-system w-productcom">
+        <div class="w-system-in">
+          <div class="product-detail-wrap">
+            <div class="w-com-content">
+              <div class="w-breadcrumbs">{eyou:position style="crumb" /} </div>
+              <div class="product-detail-top1">
+                <div class="product-detail-images">
+                  <div class="product-detail-images-in"> 
+                    <!-- 放大镜效果的style样式 -->
+                    <style type="text/css">
+    .class-zoom{
+        border:1px solid #DEDEDE;
+        background-color:#FFFFFF;
+        display:none;
+        opacity: .75; /* Standard: FF gt 1.5, Opera, Safari */
+        filter: alpha(opacity=75); /* IE lt 8 */
+        -ms-filter: "alpha(opacity=75)"; /* IE 8 */
+        -khtml-opacity: .75; /* Safari 1.x */
+        -moz-opacity: .75; /* FF lt 1.5, Netscape */
+    }
+    .class-zoom-img{
+        border:1px solid #DEDEDE;
+    }
+</style>
+                    <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.magnifier.js"></script>
+                    <div class="product-detail-image-big">
+                      <div class="magnifier"></div>
+                      {eyou:volist name="$eyou.field.image_list" row='1'} <img class="default-image g-cover" data-imageid="{$i}" src="{$field.image_url}" data-zoom="true"/> {/eyou:volist} </div>
+                    <div class="product-detail-image-small">
+                      <div class="imgsmall-pre disabled"></div>
+                      <div class="imgsmall-next"></div>
+                      <!--disabled-->
+                      <div class="small-list">
+                        <div class="iamge-slide"> {eyou:volist name="$eyou.field.image_list"} <a class="img-count img-small-item cur" href="javascript:void(0);" data-imageid="{$i}">
+                          <div class="cur-top" style="display:none;"></div>
+                          <div class="aspectRatio"></div>
+                          <div class="img-count-in img-small-item-in"><img class="g-cover" src="{$field.image_url}"/> </div>
+                          </a> {/eyou:volist} </div>
+                      </div>
+                    </div>
+                    <div style="display:none;"> {eyou:volist name="$eyou.field.image_list"} <a data-lightbox="image-{$i}" href="{$field.image_url}"> <span id="imageid{$i}"></span> </a> {/eyou:volist} </div>
+                  </div>
+                </div>
+                <div class="rotatePicbox-tel">
+                  <div class="imgSlideMain clearfix">
+                    <div id="imgSlide2" data-role="slide" class="imgSlide">
+                      <ul>
+                        {eyou:volist name="$eyou.field.image_list"}
+                        <li><a href="javascript:void(0);"><img class="g-cover" src="{$field.image_url}"></a></li>
+                        {/eyou:volist}
+                      </ul>
+                    </div>
+                    <div class="navSlideBox">
+                      <ul class="navSlide">
+                        <ul>
+                          {eyou:volist name="$eyou.field.image_list"}
+                          <li class="i_point {eyou:eq name='$i' value='1'}active{/eyou:eq}">{$i}</li>
+                          {/eyou:volist}
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                  <script src="{eyou:global name='web_templets_pc' /}/skin/js/c_wap.js"></script> 
+                  <script src="{eyou:global name='web_templets_pc' /}/skin/js/c_wap2.js"></script> 
+                  <script src="{eyou:global name='web_templets_pc' /}/skin/js/slide.js"></script> 
+                  <script>
+        setTimeout(function () {
+            imgSlideInit('#imgSlide2', 1000)
+        }, 600);
+    </script> 
+                </div>
+                <div class="product-detail-info">
+                  <div class="product-detail-info-in">
+                    <div class="prd_detInfo_con">
+                      <div class="product-title">
+                        <h2> {$eyou.field.title} </h2>
+                      </div>
+                      <div class="product-short-sum">{$eyou.field.seo_description}</div>
+                      <div class="product-grayBox clearfix">
+                        <div class="product-prices"> {eyou:volist name="$eyou.field.attr_list"}
+                          <div class="price-sale"> {$field.attr_name}： <span class="num"> ￥<span class="bigsize g-promotion">{$field.attr_value}</span> </span> </div>
+                          {/eyou:volist} </div>
+                        <div class="collect_share clearfix"> </div>
+                      </div>
+                    </div>
+                    <div class="prd_detInfo_con">
+                      <div class="product-properies-groups"> </div>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <div class="product-maincon">
+                <div class="product-maincon-in">
+                  <style>
+    .info_tab .cur_tab a{
+        cursor:auto;
+    }
+</style>
+                  <div class="info_tab">
+                    <div class="info_tab_in">
+                      <ul class="clearfix">
+                        <li class="cur_tab" data-tab="29707"><a href="javascript:void(0)">产品详细</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-descons">
+                    <div class="descon_item" id="Tabitem29707">
+                      <div class="wp-products-detail-desc" style="padding:0px;">{$eyou.field.content}</div>
+                      <p><br/>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="news-others">
+                    <div class="pre-next" >
+                      <div class="news-prev">{eyou:prenext get='pre' empty='<a>上一篇：暂无</a>'} <a href="{$field.arcurl}" title="{$field.title}"> 上一篇：{$field.title} </a> {/eyou:prenext}</div>
+                      <div class="news-next">{eyou:prenext get='next' empty='<a>下一篇：暂无</a>'} <a href="{$field.arcurl}" title="{$field.title}"> 下一篇：{$field.title} </a> {/eyou:prenext}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="prddetail_foot_fixed" >
+                <div class="prddetail_foot clearfix" style="width:100%;"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {eyou:include file="footer.htm"/} </div>
+<div class="topTel" onclick="$('body,html').animate({scrollTop: 0}, 500);"><i class="fa fa-arrow-up"></i></div>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.global.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.form.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/lightbox.min.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.product_detail.js"></script>
+</body>
+</html>

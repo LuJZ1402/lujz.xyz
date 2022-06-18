@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{eyou:global name='web_title' /}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="description" content="{eyou:global name='web_description' /}" />
+<meta name="keywords" content="{eyou:global name='web_keywords' /}" />
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/global.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/widget.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/variouscomponents.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/images.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/theme.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/color_0.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.min.js"></script>
+<!--[if !IE]><!-->
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/base.js"></script>
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/lightbox.min.css" rel="stylesheet">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.superslide.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/common.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/theme.js"></script>
+<!-- feib -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/layer.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/language.js"></script>
+<!-- plugins -->
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.formsvalidation.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.nodecommon.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/extend.js"></script>
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/components.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.menu_style.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.init.js"></script>
+<script type="text/javascript">
+$(function(){
+    dataAnimate();
+    (function($,lanno){
+        if(lanno === "" || lanno === "default"){
+            return '';
+        }
+        $(".w-languege").each(function(){
+            $(this).find("a").each(function(){
+                if($(this).data("lanno") === lanno){
+                    $(this).addClass("cur");
+                }else{
+                    if($(this).hasClass("cur")){
+                        $(this).removeClass("cur");
+                    }
+                }
+            });
+        });
+    })(jQuery,"cn");
+});
+</script>
+</head>
+<body>
+<div class="body"> {eyou:include file="header.htm" /}
+  <section class="w-container bannerBox ">
+    <div class="banner">
+      <ul class="bxslider">
+        {eyou:adv pid='1' }
+        <li> <img src="{$field.litpic}" alt="{$field.title}" title="{$field.title}"
+                             style=""  
+                             /> <a href="javascript:void(0);" target="_self"><span  style="display:none;">none</span></a> </li>
+        {/eyou:adv}
+      </ul>
+      <script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.bxslider.js"></script>
+      <link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/jquery.bxslider.css">
+      <script type="text/javascript">
+            var scale = '';
+            var speed = 500;
+            var pause = 5;
+            $(function () {
+                $('.banner>ul').bxSlider({
+                    mode: 'fade', /*滚动方式 fade、vertical、horizontal */
+                    auto: true, /*自动滚动*/
+                    autoControls: false, /*自动滚动按钮*/
+                    infiniteLoop: true, /*循环滚动*/
+                    hideControlOnEnd: true, /*无效按钮隐藏*/
+                    adaptiveHeight: true, /*图片是否实际缩放比高度显示控制，图片比例不一样高度变化*/
+                    minSlides: 1,
+                    maxSlides: 2,
+                    scale: scale,
+                    speed: speed,
+                    pause: pause * 1000
+                });
+            });
+        </script> 
+    </div>
+  </section>
+   {eyou:channelartlist typeid='1'}
+  <div class="w-container w-main">
+    <div class="w-section ">
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  ">
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="fadeInUp" style="">
+              <div class="w-title w-title1">
+                <div class="w-title-in">
+                  <div class="w-title-inner">
+                    <div class="title-h-in">
+                      <h2 class="color_main color_h">{eyou:field name='typename' /}</h2>
+                      <span class="color_vice color_span">{eyou:field name='seo_description' /}</span>
+                      <div class="simpline bg_simpline"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:60px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div col-li-div">
+            <div class="col-table">
+              <table class="div-table div-table-first" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td class="td-w" width="50%"><div class="div-padding">
+                        <div class="li-div">
+                          <div class="not-animated w-simImg" data-animate="fadeInLeft" style="cursor:pointer;text-align:center;padding-top:20px;">
+                            <div class="image-w"> <a title="" style="cursor:default;" href="javascript:void(0);" >
+                              <div class="img" > <img src="{eyou:field name='litpic' /}"  /> </div>
+                              <div class="caption w-img-caption">
+                                <div class="captionbg"></div>
+                              </div>
+                              </a> </div>
+                          </div>
+                        </div>
+                      </div></td>
+                    
+                    <td class="td-w" width="50%"><div class="div-padding">
+                        <div class="li-div">
+                          <div class="not-animated w-text" data-animate="fadeInDown" style="">
+                            <p><span style="font-size:24px;font-weight:bold;">{eyou:global name='web_name' /}</span><br/>
+                              <span style="color:#a4a4a4;"></span></p>
+                            {eyou:type addtable='single_content' typeid='6'}
+                            {$field.content|html_msubstr=###,0,255}...
+                            {/eyou:type} </div>
+                        </div>
+                        <div class="li-div">
+                          <div class="not-animated w-button" data-animate="fadeInUp" style="padding-top:20px;">
+                            <div class="btn-default-b btn-default-w btn-large-w g-click-to-link" onclick="window.open('{eyou:field name='typeurl' /}','_self')"> <span class="btn-inner" style="">查看更多</span> </div>
+                            <a style="display:none;" href="{eyou:field name='typeurl' /}" ><span ></span></a> </div>
+                        </div>
+                      </div></td>
+                     </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:85px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+       </div>
+       {/eyou:channelartlist}
+      {eyou:channelartlist typeid='2'}
+    <div class="w-section "> 
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  ">
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:30px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="fadeInUp" style="">
+              <div class="w-title w-title1">
+                <div class="w-title-in">
+                  <div class="w-title-inner">
+                    <div class="title-h-in">
+                      <h2 class="color_main color_h">{eyou:field name='typename' /}</h2>
+                      <span class="color_vice color_span">{eyou:field name='seo_description' /}</span>
+                      <div class="simpline bg_simpline"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:45px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div"  onselectstart="return false" style=" -moz-user-select: none;">
+            <div class="not-animated w-adNews w-adNews2" data-animate="fadeInUp" style="">
+              <div class="w-adNews-in clearfix">
+                <ul>
+                 {eyou:arclist row='8' titlelen='30' mod='4'}
+                  <li {eyou:eq name='$mod' value='0'}class="li-right"{/eyou:eq}>
+                    <div class="news-item">
+                      <div class="news-imgbox"><a class="img-count w-news-img" href="{$field.arcurl}" >
+                        <div class="aspectRatio" style="padding-bottom:75%;"></div>
+                        <div class="img-count-in"><img src="{$field.litpic}"></div>
+                        </a></div>
+                      <div class="news-com">
+                        <div class="news-h"><a  href="{$field.arcurl}"  title="{$field.title}">{$field.title}</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  {/eyou:arclist}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-button"  style="text-align:center;padding-top:20px;padding-bottom:20px;">
+              <div class="btn-default-b btn-default-w btn-large-w g-click-to-link" onclick="window.open('{eyou:field name='typeurl' /}','_self')"> <span class="btn-inner" style="">查看更多</span> </div>
+              <a style="display:none;" href="{eyou:field name='typeurl' /}" ><span></span></a> </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:60px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      {/eyou:channelartlist} 
+      {eyou:type typeid='9'}
+    <div class="w-section pdTop-default pdBottom-default" style="background:url({$field.litpic}) no-repeat center;color:#ffffff;">
+      <div class="row" style="max-width:;">
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  pdTop-big pdBottom-big">
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="fadeInUp" style="">
+              <style type="text/css">
+.index_text2{padding:40px 10px 20px 39.2%;}
+						.index_text2 .index_text_con{ margin-left:-35px;}
+						.index_text2 .index_text_con >h3{margin:0 0 40px 99px; font-size:24px; font-weight:bold;}
+						.index_text2 .index_text_con .item{ min-height:8em;}
+						.index_text2 .img{ float:left; }
+						.index_text2 .text_me{ margin-left:89px; padding:0 10px;}
+						.index_text2 .text_me h4{ margin:0 0 10px; line-height:1.2; font-size:115%; font-weight:bold;}
+						.index_text2 .text_me p{ line-height:2; font-size:95%; margin-bottom:0; padding-bottom:1em;}
+                        @media (min-width:1201px){
+                            .index_text2 .index_text2_bg{width:1920px; left:-360px;}
+                        }
+						@media (min-width:767px) and (max-width:960px){
+							.index_text2{ padding-left:35%;}
+						}
+                        @media (max-width:767px){
+                            .index_text2{padding-left:10px;}
+							.index_text2 .index_text_con{ margin-left:0;}
+							.index_text2 .text_me p{ line-height:1.5;}
+                        }
+						@media (min-width:400px) and (max-width:480px){
+							.index_text2{ font-size:90%;}
+						}
+						@media (max-width:480px){
+							.index_text2 .index_text_con > h3{ font-size:150%; margin-left:2.5em; margin-bottom:1em; padding-left:10px;}
+							.index_text2 .img img{ width:4em; height:4em;}
+							.index_text2 .text_me{ margin-left:4em;}
+						}
+</style>
+              <div class="index_text2" style=" position:relative;"> 
+                <div class="index_text_con" style="position:relative; z-index:2; ">
+                  <h3>{$field.typename}</h3>
+                  {eyou:arclist  titlelen='30' infolen='85' typeid='9' }
+                  <div class="item">
+                    <div class="img"></div>
+                    <div class="text_me">
+                      <h4>{$field.title}</h4>
+                      <p>{$field.seo_description}</p>
+                    </div>
+                  </div>
+                  {/eyou:arclist} </div>
+                 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/eyou:type}
+    {eyou:channelartlist typeid='3'}
+    <div class="w-section "> 
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  ">
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:30px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="fadeInUp" style="">
+              <div class="w-title w-title1">
+                <div class="w-title-in">
+                  <div class="w-title-inner">
+                    <div class="title-h-in">
+                      <h2 class="color_main color_h">{eyou:field name='typename' /}</h2>
+                      <span class="color_vice color_span">{eyou:field name='seo_description' /}</span>
+                      <div class="simpline bg_simpline"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:45px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div"  onselectstart="return false" style=" -moz-user-select: none;">
+            <div class="not-animated w-adNews w-adNews2" data-animate="fadeInUp" style="">
+              <div class="w-adNews-in clearfix">
+                <ul>
+                  {eyou:arclist row='4' titlelen='30' infolen='55' }
+                  <li {eyou:eq name='$i' value='4'}class="li-right"{/eyou:eq}>
+                    <div class="news-item">
+                      <div class="news-imgbox"><a class="img-count w-news-img" href="{$field.arcurl}" >
+                        <div class="aspectRatio" style="padding-bottom:75%;"></div>
+                        <div class="img-count-in"><img src="{$field.litpic}"></div>
+                        </a></div>
+                      <div class="news-com">
+                        <div class="news-com-top clearfix">
+                          <div class="date">{$field.add_time|MyDate='Y-m-d',###}</div>
+                          <div class="viewDetail"></div>
+                        </div>
+                        <div class="news-h"><a  href="{$field.arcurl}"  title="{$field.title}">{$field.title}</a></div>
+                        <div class="news-sum">{$field.seo_description}</div>
+                      </div>
+                    </div>
+                  </li>
+                  {/eyou:arclist}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-button"  style="text-align:center;padding-top:20px;padding-bottom:20px;">
+              <div class="btn-default-b btn-default-w btn-large-w g-click-to-link" onclick="window.open('{eyou:field name='typeurl' /}','_self')"> <span class="btn-inner" style="">查看更多</span> </div>
+              <a style="display:none;" href="{eyou:field name='typeurl' /}" ><span></span></a> </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:60px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      {/eyou:channelartlist} 
+    <div class="w-section pdTop-default pdBottom-default" style="background:#0b5a9f;"> {eyou:channelartlist typeid='5'}
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  pdTop-large pdBottom-large">
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="fadeInUp" style="">
+              <div style="text-align:center; color:#fff;">
+                <p style="font-size:130%;">{eyou:field name='typename' /}</p>
+                <p style="line-height:1.8;">{eyou:field name='seo_description' /}</p>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:70px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div col-li-div">
+            <div class="col-table">
+              <table class="div-table div-table-first" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td class="td-w" width="51.5040650406504%"><div class="div-padding">
+                        <div class="li-div">
+                          <div class="not-animated w-map" data-animate="fadeInUp" style="">
+                            <div class="map">
+                            <img src="{eyou:global name='web_attr_6' /}" width="100%"  height=" 350px">
+                            </div>
+                          </div>
+                        </div>
+                      </div></td>
+                    <td class="td-w" width="48.466122014735774%"><div class="div-padding">
+                        <div class="li-div">
+                          <div class="not-animated w-text" data-animate="fadeInUp" style="">
+                            <div style="color:#fff;">
+                              <h3 style="font-size:160%; margin:30px 0 40px;  ">{eyou:global name='web_name' /}</h3>
+                              <p style="line-height:1.8; font-size:120%;">联系人：{eyou:global name='web_attr_1' /}<br/>
+                                电话：{eyou:global name='web_attr_2' /}<br/>
+                                邮箱：{eyou:global name='web_attr_3' /}<br/>
+                                地址：{eyou:global name='web_attr_4' /}<br/>
+                                热线电话：{eyou:global name='web_attr_5' /}<br/>
+                                （二十四小时在线，你的建议或意见使我们前进的动力）</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/eyou:channelartlist} </div>
+  </div>
+  {eyou:include file="footer.htm" /} </div>
+<div class="topTel" onclick="$('body,html').animate({scrollTop: 0}, 500);"><i class="fa fa-arrow-up"></i></div>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.global.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.form.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/lightbox.min.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.custom.js"></script>
+</body>
+</html>

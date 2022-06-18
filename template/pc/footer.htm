@@ -1,0 +1,42 @@
+<div class="w-container w-footer">
+  <div class="w-footer-section " >
+    <div class="w-footer-in" >
+      <div class="foot-mask" ></div>
+      <div class="w-foot-content">
+        <div class="li-div">
+          <div class="w-text"  style="">
+            <div align="center">{eyou:global name='web_copyright' /} </br>
+              {eyou:global name='web_recordnum' /}</div>
+            <div align="center">
+              <ul class="link">
+                <span>友情链接 :</span> {eyou:flink titlelen='45' type='text'}
+                <li><a href="{$field.url}" {$field.target}>{$field.title} </a></li>
+                {/eyou:flink}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-service-fixed">
+    <div class="service-item bg_s_default color_s_default aHoverbg_deepen aHovercolor_deepen service-item-top"> <i class="fa fa-caret-up"></i>
+      <div class="top" onclick="$('body,html').animate({scrollTop: 0}, 'normal');">TOP</div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) {
+                    $('.w-service-fixed .service-item-top').show();
+                } else {
+                    $('.w-service-fixed .service-item-top').hide();
+                }
+            });
+        });
+    </script> 
+  </div>
+</div>
+{eyou:global name='web_thirdcode_pc' /} 
+<!-- 应用插件标签 start --> 
+{eyou:weapp type='default' /} 
+<!-- 应用插件标签 end -->
